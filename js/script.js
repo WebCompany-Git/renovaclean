@@ -1,0 +1,24 @@
+document.addEventListener('DOMContentLoaded',()=>{
+  if(window.lucide) lucide.createIcons({attrs:{'stroke-width':1.8}});
+  const header=document.querySelector('.site-header');
+  const menuBtn=document.querySelector('.menu-toggle');
+  const menu=document.querySelector('.mobile-menu');
+  const navLinks=[...document.querySelectorAll('.mobile-menu a')];
+  const setHeader=()=>header.classList.toggle('scrolled',window.scrollY>24);
+  setHeader(); window.addEventListener('scroll',setHeader,{passive:true});
+  menuBtn?.addEventListener('click',()=>{const open=menu.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open);menuBtn.innerHTML=open?'<i data-lucide="x"></i>':'<i data-lucide="menu"></i>';if(window.lucide)lucide.createIcons({attrs:{'stroke-width':1.8}})});
+  navLinks.forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.innerHTML='<i data-lucide="menu"></i>';if(window.lucide)lucide.createIcons({attrs:{'stroke-width':1.8}})}));
+  const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+  const comparison=document.querySelector('[data-comparison]');
+  const range=comparison?.querySelector('.comparison-range');
+  const after=comparison?.querySelector('.after');
+  const handle=comparison?.querySelector('.comparison-handle');
+  const updateComparison=()=>{if(!range)return;const value=range.value;after.style.clipPath=`inset(0 0 0 ${value}%)`;handle.style.left=`${value}%`};
+  range?.addEventListener('input',updateComparison);updateComparison();
+  const sections=[...document.querySelectorAll('main section[id]')];
+  const anchors=[...document.querySelectorAll('.desktop-nav a')];
+  const activeObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){anchors.forEach(a=>a.classList.toggle('is-active',a.getAttribute('href')===`#${entry.target.id}`))}}),{rootMargin:'-45% 0px -45% 0px'});
+  sections.forEach(s=>activeObserver.observe(s));
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const target=document.querySelector(a.getAttribute('href'));if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'})}}));
+});

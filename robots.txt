@@ -1,0 +1,5 @@
+# RENOVA CLEAN — robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://renova-clean.vercel.app/sitemap.xml
