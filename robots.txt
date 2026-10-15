@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://renova-clean.vercel.app/sitemap.xml
+Sitemap: https://renovaclean.vercel.app/sitemap.xml

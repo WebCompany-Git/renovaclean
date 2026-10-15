@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://renova-clean.vercel.app/</loc>
+    <loc>https://renovaclean.vercel.app/</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://renova-clean.vercel.app/img/antes.jpg</image:loc>
+      <image:loc>https://renovaclean.vercel.app/img/antes.jpg</image:loc>
       <image:title>Sofá antes da higienização profissional</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://renova-clean.vercel.app/img/depois.jpg</image:loc>
+      <image:loc>https://renovaclean.vercel.app/img/depois.jpg</image:loc>
       <image:title>Ambiente renovado depois da higienização profissional</image:title>
     </image:image>
   </url>

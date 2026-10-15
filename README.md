@@ -50,7 +50,7 @@ Renova-clean123/
 
 ## SEO
 
-Ver `docs/GUIA-SEO-GOOGLE.md`. Domínio actual: `https://renova-clean.vercel.app` (hospedado na Vercel). Se mudar de domínio, actualizar `index.html`, `robots.txt` e `sitemap.xml`.
+Ver `docs/GUIA-SEO-GOOGLE.md`. Domínio actual: `https://renovaclean.vercel.app` (hospedado na Vercel). Se mudar de domínio, actualizar `index.html`, `robots.txt` e `sitemap.xml`.
 
 ## Funcionalidades implementadas no código
 
@@ -73,7 +73,7 @@ O site utiliza uma identidade visual baseada sobretudo em tons de azul-escuro e 
 - [ ] Utilizar fotografias reais e autorizadas nos exemplos de antes/depois.
 - [ ] Confirmar que qualquer testemunho apresentado corresponde a um cliente real e tem autorização; caso contrário, apresentá-lo como compromisso da empresa, não como avaliação de cliente.
 - [x] Favicon e ícones corrigidos (PNG/ICO em `assets/icons/`).
-- [x] Domínio definido: renova-clean.vercel.app.
+- [x] Domínio definido: renovaclean.vercel.app.
 - [ ] Ligar Google Search Console + Perfil de Empresa.
 - [ ] Verificar os links internos, incluindo o link do logótipo, e corrigir eventuais erros de JavaScript.
 - [ ] Testar menu, comparador, animações e contactos em computador e telemóvel.
